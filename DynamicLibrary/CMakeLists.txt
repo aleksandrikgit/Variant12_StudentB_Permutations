@@ -1,0 +1,6 @@
+add_library(PermutationDLL SHARED ../src/PermutationLib.cpp)
+set_target_properties(PermutationDLL PROPERTIES PREFIX "")
+target_include_directories(PermutationDLL PUBLIC ../include)
+target_compile_definitions(PermutationDLL PRIVATE PERMUTATION_BUILD)
+target_compile_features(PermutationDLL PUBLIC cxx_std_20)
+set_target_properties(PermutationDLL PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS OFF)
